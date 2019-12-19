@@ -4,3 +4,6 @@ services:
 
 before_install:
     - docker build -t kdmalviyan/react_docker -f Dockerfile.dev .
+
+script:
+    - docker run kdmalviyan/react_docker npm run test -- --coverage
